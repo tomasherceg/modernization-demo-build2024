@@ -1,20 +1,30 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Microsoft Build 2024 Demo: Modernization of legacy .NET web apps
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+This is a demo for the Microsoft Build session [Modernize old web applications to .NET 8](https://build.microsoft.com/en-US/sessions/c7052569-5d05-416d-908b-0c21f075d108?source=/speakers/7e24fd79-8a71-4118-ac19-0e9e137d3957).
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+[Slides](resources/slides.pdf)
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## Running the sample
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+1. Clone the repository and open the `src/Modernization.sln` in Visual Studio.
+
+2. Open the `Modernization.BackendApi/appsettings.json` file and update the connection string to the SQL Server database to match your environment. The database does not need to exist, the application will create it itself.
+
+3. Right click on the `Modernization.BackendApi` in the _Solution Explorer_ window and select __View in browser__.
+
+4. To run the __Side by side modernization example__, run the `Modernization.SideBySide` and `Modernization.SideBySide.New` projects by right-clicking on the solution and choosing __Set startup projects__. Configure both projects to start at the same time.
+
+5. To run the __In-place modernization example__, just run the `Modernization.InPlace` project.
+
+## Useful resources
+
+* [Side-by-side migration - official docs](https://learn.microsoft.com/en-us/aspnet/core/migration/inc/start?view=aspnetcore-8.0)
+
+* [In-place migration using DotVVM](https://www.dotvvm.com/modernize)
+
+* [DotVVM for Visual Studio extension](https://marketplace.visualstudio.com/items?itemName=TomasHerceg.DotVVM-VSExtension2022)
+
+* [ASPX to DotVVM Converter](https://www.dotvvm.com/webforms/convert)
+
+* [DotVVM GitHub repo](https://github.com/riganti/dotvvm)
+
